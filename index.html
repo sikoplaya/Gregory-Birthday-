@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 18th Birthday Gregory!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: url('https://freight.cargo.site/w/1200/i/fba4ae9ef941c6791b1d82fb9acd2431b513e60bbe7c9f439de4fa7a8b38000e/psych-head-1.png') center/cover no-repeat fixed;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .card-container {
+      width: 700px;
+      height: 400px;
+      perspective: 2000px;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+    }
+    .card.open .card-front {
+      transform: rotateY(-180deg);
+    }
+    .card.open .card-back {
+      transform: rotateY(0);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+    .card-front {
+      background: #bdb9b9;
+      color: #ff6600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: transform 1s ease;
+      z-index: 2;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      background-color: #0f0801;
+      color: #f5f5fa;
+      transition: transform 1s ease;
+    }
+    .card-half {
+      width: 50%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .card-half.image {
+      background: #170000;
+    }
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card-half.text {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card" id="birthdayCard">
+      <div class="card-face card-front" id="cardFront">
+        Happy Birthday Gregory
+      </div>
+      <div class="card-face card-back">
+        <div class="card-half image">
+          <img src="gregory.jpg" alt="Gregory's Photo" class="profile-pic" />
+        </div>
+        <div class="card-half text">
+          <div>
+            Happy 18th, Gregory!<br><br>
+            Welcome to adulthood. Here's to discovering new paths, becoming a pedo, and being black.<br><br>
+            Stay curious. Stay sharp. Stay gay.<br><br>
+            – niggatopia
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="birthdayTune" url="https://www.youtube.com/watch?v=CPP4oAYTULc"><audio>
+
+  <script>
+    const card = document.getElementById('birthdayCard');
+    const front = document.getElementById('cardFront');
+    const tune = document.getElementById('birthdayTune');
+
+    front.addEventListener('click', () => {
+      card.classList.add('open');
+      tune.play();
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
